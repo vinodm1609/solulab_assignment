@@ -3,7 +3,7 @@ name: test
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   test:
@@ -27,3 +27,6 @@ jobs:
 
       - name: Build dependencies
         run: yarn build
+
+      - name: Run test case
+        run: yarn test

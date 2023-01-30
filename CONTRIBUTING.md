@@ -25,7 +25,7 @@ If not you might need to execute commands one by one instead of chaining them wi
 
 We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**. But also,
-we use the git commit messages to **generate the [change log](https://github.com/anujmgeek/lead_hub/blob/dev/CHANGELOG.MD)**.
+we use the git commit messages to **generate the [change log](https://github.com/vinodm1609/solulab_assignment/blob/main/CHANGELOG.md)**.
 
 ### Format
 
@@ -116,7 +116,7 @@ test(tags): add dispatch filter action test, adjust existing tests
 
 ```
 
-Even more [examples](https://github.com/anujmgeek/lead_hub/commits/dev) of commit messages from commit history of this project.
+Even more [examples](https://github.com/vinodm1609/solulab_assignment/commits/main) of commit messages from commit history of this project.
 
 ## Pull Requests (PR)
 

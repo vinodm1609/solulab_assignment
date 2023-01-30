@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest Js Leadhub project](https://github.com/vinodm1609/solulab_assignment)
+[Nest Js solulab project](https://github.com/vinodm1609/solulab_assignment)
 is a starter pack for seamlessly kick-starting your API development with the industry's best practices and recommendations.
 
 ## Table of Content
@@ -55,8 +55,8 @@ Make sure you enter the correct values in your `.env` file:
 
 ```
 MONGO_URI=<your mongodb uri>
-HOST=<host> # defaults to http://localhost:3002/
-PORT=<port> # defaults to 3002
+HOST=<host> # defaults to http://localhost:3004/
+PORT=<port> # defaults to 3004
 
 
 ```
@@ -66,14 +66,14 @@ PORT=<port> # defaults to 3002
 If you can use docker cli, you can build docker image.
 
 ```bash
-  docker build -t leadhub
+  docker build -t solulab
   docker images # list up docker images
 ```
 
 And then you can create and run docker container using builded image.
 
 ```bash
-  docker run -d -p 3002:3002 leadhub
+  docker run -d -p 3002:3002 solulab
   docker ps # list up running container
 ```
 
@@ -90,14 +90,12 @@ And then you can create and run docker container using builded image.
 
 ```bash
 # Install  all dependencies
-npm install
+yarn
 ```
 
 ## Running the app
 
 ```bash
-# development
-$ npm run start:dev
 
 # watch mode
 $ nest start --watch
@@ -111,33 +109,33 @@ $ npm run start:prod
 
 ```bash
 # build docker image named nest-sample
-$ docker build . -t leadhub
+$ docker build . -t solulab
 
 # list up docker images
 $ docker images
 
 # run docker container using image named nest-sample (host port 3002 is mapped container port 3002 and container run background process)
-$ docker run -d -p 3002:3002 leadhub
+$ docker run -d -p 3002:3002 solulab
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn test
 
 # e2e tests
-$ npm run test:e2e
+$ yarn test:e2e
 
 # test coverage
-$ npm run test:cov
+$ yarn test:cov
 ```
 
 ## Documentation
 
 Documentation about this project is made swagger.
 
-Start this api and connect http://localhost:3002/leadhub in your browser.
+Start this api and connect http://localhost:3004/solulab in your browser.
 
 ## Useful Commands
 
@@ -193,7 +191,7 @@ The project implements some of nodejs [security techniques](https://docs.nestjs.
 
 Please make sure you fill in the appropriate fields when submitting an issue. Our team will
 try to resolve it as soon as possible.
-[Bug](https://github.com/vinodm1609/solulab_assignment/blob/dev/.github/ISSUE_TEMPLATE/bug.md)
+[Bug](https://github.com/vinodm1609/solulab_assignment/blob/main/.github/ISSUE_TEMPLATE/bug.md)
 
 ## Contributors
 
@@ -202,15 +200,15 @@ Want to start contributing to open source with the Nest Authentication and User 
 Leave your mark and join the growing team of contributors!
 
 Get started by checking out list of [open issues](https://github.com/vinodm1609/solulab_assignment/issues)
-and reading [Contributor Guide](https://github.com/vinodm1609/solulab_assignment/blob/dev/CONTRIBUTING.md)
+and reading [Contributor Guide](https://github.com/vinodm1609/solulab_assignment/blob/main/CONTRIBUTING.md)
 
 ## ChangeLog
 
-[Changelog](https://github.com/vinodm1609/solulab_assignment/blob/dev/CHANGELOG.MD)
+[Changelog](https://github.com/vinodm1609/solulab_assignment/blob/main/CHANGELOG.md)
 
 ## Branching Strategy
 
-[Branching Strategy](https://github.com/vinodm1609/solulab_assignment/blob/dev/docs/branching%20strategy.md)
+[Branching Strategy](https://github.com/vinodm1609/solulab_assignment/blob/main/docs/branching%20strategy.md)
 
 ## Project Architecture
 
