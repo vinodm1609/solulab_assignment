@@ -150,7 +150,10 @@ Start this api and connect http://localhost:3004/solulab in your browser.
 ## Goals
 
 Developers often want a good starting point when implementing a new API.
-Common tasks such as authentication and user management are re-implemented on a regular
+Common tasks such as add category and data should be saved in the DB.
+add product and data should be saved in the DB.
+Category ID in product table should be referenced in the category table.
+documentation on how it's designed and how to run the code.
 or use it as a inspiration to build any powerful API server using Nest Js.
 basis.
 With this starter kit, the developer directly bootstrap the development of their new API,

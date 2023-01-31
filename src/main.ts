@@ -91,8 +91,6 @@ async function bootstrap() {
     .setTitle('solulab')
     .setDescription('Solulab Api')
     .setVersion('v1')
-    .addTag('Product')
-    .addTag('Category')
     .addBearerAuth(
       {
         description: `[just text field] Please enter token in following format: Bearer <JWT>`,
