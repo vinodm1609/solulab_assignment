@@ -6,6 +6,8 @@ import { HealthCheckModule } from './health-check/health-check.module';
 import { APP_GUARD } from '@nestjs/core';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { ProductModule } from './product/product.module';
+import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
@@ -30,6 +32,8 @@ import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
       inject: [ConfigService],
     }),
     HealthCheckModule,
+    ProductModule,
+    CategoryModule,
   ],
   controllers: [AppController],
   providers: [
