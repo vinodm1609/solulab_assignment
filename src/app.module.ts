@@ -8,19 +8,19 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { ProductModule } from './product/product.module';
 import { CategoryModule } from './category/category.module';
-import * as dotenv from 'dotenv';
 
-dotenv.config();
 @Module({
   imports: [
     ConfigModule,
     ConfigModule.forRoot(),
     MongooseModule.forRootAsync({
-      useFactory: () => ({
-        uri: process.env.MONGO_URI,
+      imports: [ConfigModule],
+      useFactory: (configService: ConfigService) => ({
+        uri: process.env,
         useNewUrlParser: true,
         useUnifiedTopology: true,
       }),
+      inject: [ConfigService],
     }),
 
     ThrottlerModule.forRootAsync({
