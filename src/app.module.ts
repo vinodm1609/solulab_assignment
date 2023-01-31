@@ -14,13 +14,11 @@ import { CategoryModule } from './category/category.module';
     ConfigModule,
     ConfigModule.forRoot(),
     MongooseModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: (configService: ConfigService) => ({
-        uri: process.env,
+      useFactory: () => ({
+        uri: process.env.MONGO_URI,
         useNewUrlParser: true,
         useUnifiedTopology: true,
       }),
-      inject: [ConfigService],
     }),
 
     ThrottlerModule.forRootAsync({
