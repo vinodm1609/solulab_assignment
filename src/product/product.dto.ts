@@ -67,7 +67,7 @@ export class UpdateProductDto {
 
   @ApiPropertyOptional({ type: Number })
   @IsOptional()
-  @IsString()
+  @IsNumber()
   unitPrice?: number;
 
   @ApiPropertyOptional({ type: String })
