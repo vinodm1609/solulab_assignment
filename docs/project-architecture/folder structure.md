@@ -1,48 +1,18 @@
 # Folder structure
 
 ```
-├───docs
-│   └───Project Architecture
-└───src
-    ├───auth
-    |     |---dto
-    |     |---guard
-    |     |     |---test
-    |     |---strategy
-    ├───aws
-    │
-    │----common
-    |      |---decorators
-    |      |---permission
-    |      |---role
-    |      |---service
-    |
-    |---connector
-    |
-    |---constants
-    |     |---permission
-    |     |---response
-    |
-    ├───contact
-    │
-    ├───filters
-    │
-    │----health-check
-    |
-    |---helpers
-    |
-    │----interceptor
-    |
-    |----providers
-    |
-    |---sync
-    |
-    |---template
-    |
-    |---user
-    |    |---invitation
-    |
-    |---work-space
+├── docs/
+│   └── Project Architecture
+├── src/
+│   ├── category
+│   ├── constant
+│   ├── decorators
+│   ├── filter
+│   ├── health-check
+│   ├── helper
+│   ├── interceptor
+│   └── product
+└── test
 
 ```
 
