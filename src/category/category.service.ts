@@ -1,8 +1,8 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, PaginateModel, PaginateResult } from 'mongoose';
-import { PaginationDto, DefaultSort } from 'src/constant/pagination';
-import { STATUS_MSG } from 'src/constant/status-message.constants';
+import { PaginationDto, DefaultSort } from '../constant/pagination';
+import { STATUS_MSG } from '../constant/status-message.constants';
 import {
   AddCategoryDto,
   CategoryQueryDto,
