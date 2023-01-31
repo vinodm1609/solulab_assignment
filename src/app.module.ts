@@ -15,8 +15,8 @@ import { CategoryModule } from './category/category.module';
     ConfigModule.forRoot(),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
-      useFactory: (configService: ConfigService) => ({
-        uri: configService.get<string>('MONGO_URI'),
+      useFactory: () => ({
+        uri: process.env.MONGO_URI,
         useNewUrlParser: true,
         useUnifiedTopology: true,
       }),
