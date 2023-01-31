@@ -15,9 +15,9 @@ export class ProductService {
   private readonly logger = new Logger(ProductService.name);
   constructor(
     @InjectModel(Product.name)
-    private readonly ProductModel: Model<ProductDocument>,
+    private readonly productModel: Model<ProductDocument>,
     @InjectModel(Product.name)
-    private readonly ProductPage: PaginateModel<ProductDocument>,
+    private readonly productPage: PaginateModel<ProductDocument>,
   ) {}
 
   /**
@@ -28,7 +28,7 @@ export class ProductService {
    *
    */
   async create(addProductDto: AddProductDto): Promise<ProductDocument> {
-    const Product = new this.ProductModel({
+    const Product = new this.productModel({
       ...addProductDto,
     });
     this.logger.debug(`creating Product: ${Product}`);
@@ -47,7 +47,7 @@ export class ProductService {
     query: ProductQueryDto,
     paginateOptions: PaginationDto,
   ): Promise<PaginateResult<ProductDocument>> {
-    const product = await this.ProductPage.paginate(
+    const product = await this.productPage.paginate(
       { ...query },
       {
         sort: DefaultSort,
@@ -62,19 +62,18 @@ export class ProductService {
    *
    * @param id.
    * @return Product
-   * @description This function is use for findById Product.
+   * @description This function is use for findById to find product.
    *
    */
   async findById(id: string): Promise<ProductDocument> {
-    const product = await (await this.ProductModel.findById({ _id: id }))
-      .populated('category')
-      .exec();
+    const product = await this.productModel.findById(id).populate('category');
     if (!product) {
-      this.logger.debug(`Product ${id} is not authorized `);
+      this.logger.debug(`This product ${id} is not available `);
       throw new NotFoundException(STATUS_MSG.ERROR.RECORD_NOT_FOUND);
     }
 
     this.logger.debug(`find Product ${id}`);
+
     return product;
   }
 
@@ -89,7 +88,7 @@ export class ProductService {
     id: string,
     updateProductDto: UpdateProductDto,
   ): Promise<ProductDocument> {
-    const product = await this.ProductModel.findByIdAndUpdate(
+    const product = await this.productModel.findByIdAndUpdate(
       id,
       updateProductDto,
       {
@@ -109,7 +108,7 @@ export class ProductService {
    *
    */
   async delete(id: string): Promise<ProductDocument> {
-    const product = await this.ProductModel.findByIdAndDelete({ _id: id });
+    const product = await this.productModel.findByIdAndDelete({ _id: id });
     if (!product) {
       throw new NotFoundException(STATUS_MSG.ERROR.RECORD_NOT_FOUND);
     }
